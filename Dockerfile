@@ -24,11 +24,11 @@ RUN pip3 install tensorflow \
 RUN pip3 install h5py \
     keras
 
-# RUN useradd docker -u 1000 -s /bin/bash -m
-# USER docker
+RUN useradd docker -u 1000 -s /bin/bash -m
+USER docker
 
-# # Set working directory
-# WORKDIR /work
+# Set working directory
+WORKDIR /work
 
-# ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash"]
 

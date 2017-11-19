@@ -28,6 +28,12 @@ gcloud compute ssh --zone=us-west1-b --project "GCP Tutorial" <inst>
 
 GCPは、インスタンスを起動する度にIPが変わるので文句言われるが無視
 
+ファイルのコピー
+
+```
+gcloud compute copy-files localfiles instance-ml:/home/shun
+```
+
 ## DockerのInstall
 
 dockerはもともとmicroservice向け
@@ -115,3 +121,16 @@ gcloud compute ssh instance-ml -- -L 50001:localhost:50000
 jupyter notebook --ip='*' --allow-root
 
 sudo apt-get install -y git
+
+tmux
+
+- Ctrl-b
+  - "
+  - %
+  - SPC
+  - o
+  - z
+
+```
+docker run -ti --rm --publish 50000:8888 -v $PWD/work tsunoda/tensorflow
+```
