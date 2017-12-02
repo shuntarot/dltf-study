@@ -132,5 +132,5 @@ tmux
   - z
 
 ```
-docker run -ti --rm --publish 50000:8888 -v $PWD/work tsunoda/tensorflow
+docker run -ti --rm --publish 50000:8888 -v $PWD:/work tsunoda/tensorflow
 ```
